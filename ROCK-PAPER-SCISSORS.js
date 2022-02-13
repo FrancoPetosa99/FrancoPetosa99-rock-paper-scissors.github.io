@@ -16,8 +16,8 @@ btn_options.forEach(btn_option => {
         player1_choice=set_player_choice(e.target)
         computer_choice=set_computer_choice()
         winner.textContent=`And the winner is...`
-        hand_player1.src=`./ASSETS/ROCK.png`
-        hand_computer.src=`./ASSETS/ROCK.png`
+        hand_player1.src=`https://francopetosa99.github.io/FrancoPetosa99-rock-paper-scissors.github.io/ASSETS/rock.png`
+        hand_computer.src=`https://francopetosa99.github.io/FrancoPetosa99-rock-paper-scissors.github.io/ASSETS/rock.png`
         play_hands()
     })
 });
