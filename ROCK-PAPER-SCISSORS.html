@@ -8,14 +8,21 @@
     </head>
     <body>
         <div class="board_game">
-            <p class="title_welcome">Welcome!</p>
-            <p class="title_welcome">This is a ROCK-PAPER-SCISSORS game</p>
-            <div class="contenedor_hands_intro">
-                <img src="./ASSETS/rock.png" class="hand_player1_intro" />
-                <h1 class="vs">VS</h1>
-                <img src="./ASSETS/rock.png" class="hand_player2_intro" />
-            </div>
-            <button class="start_btn">Lets play</button>
+            <div class="score_board">
+                <h2 class="player1_score">player1: 0</h2>
+                <h2 class="computer_score">computer: 0</h2>
+               </div>
+               <h3 class="winner">Choose your weapon</h3>
+               <div class="contenedor_hands">
+                       <img draggable="false" src="https://francopetosa99.github.io/FrancoPetosa99-rock-paper-scissors.github.io/ASSETS/rock.png" class="hand_player1" />
+                       <h1 class="vs">VS</h1>
+                       <img draggable="false" src="https://francopetosa99.github.io/FrancoPetosa99-rock-paper-scissors.github.io/ASSETS/rock.png" class="hand_computer" />
+               </div>
+               <div class="btn_container">
+                   <button class="btn_option">ROCK</button>
+                   <button class="btn_option">PAPER</button>
+                   <button class="btn_option">SCISSORS</button>
+               </div>
         </div>
     </body>
     <script src="ROCK-PAPER-SCISSORS.js"></script>
