@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(16, 16, 78);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.board_game{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*INTRO*/
+.title_welcome{
+    color: white;
+    font-size: 40px;
+    transform: translateY(-40px);
+    animation: vertical 1s ease-in-out forwards;
+}
+.vs{
+    opacity: 0%;
+    transform: translateY(-40px);
+    animation: vertical 1s ease-in-out  1s forwards;
+}
+.contenedor_hands_intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.hand_player1_intro{
+    opacity: 0;
+    transform: translateX(-150px) rotateY(180deg);
+    animation: h_left 1s ease-in-out  2s forwards;
+}
+.hand_player2_intro{
+    opacity: 0;
+    animation: h_right 1s ease-in-out  2s forwards;
+}
+.start_btn{
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 10px;
+    border: solid 1px rgb(16, 16, 78);
+    opacity: 0%;
+    animation: h_right 1s ease-in-out  3s forwards;
+}
+.start_btn:hover{
+    background-color: rgb(16, 16, 78);
+    border: solid 1px white;
+    color: white;
+}
+
+@keyframes vertical {
+    0%{
+        opacity: 0%;
+        transform: translateY(-40px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+@keyframes h_left {
+    0%{
+        transform: translateX(-150px)  rotateY(180deg);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0px)  rotateY(180deg);
+    }
+}
+@keyframes h_right {
+    0%{
+        transform: translateX(150px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+/*GAME STARTED*/
+.contenedor_hands{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: auto;
+}
+.btn_container{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.btn_option{
+    cursor: pointer;
+    width: 100%;
+    max-width: 120px;
+    background-color: forestgreen;
+    border: solid transparent;
+    opacity: 80%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btn_option:hover{
+    opacity: 100%;
+}
+.score_board{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+.winner{
+    color: white;
+}
+.hand_player1{
+    transform: rotateY(180deg)
+}
+.shake_hands_playe1{
+    animation: shake_hands_playe1 0.5s ease-in infinite alternate-reverse ;
+}
+@keyframes shake_hands_playe1 {
+    0%{
+        transform: translateY(0px) rotateY(180deg);
+    }
+    100%{
+        transform: translateY(-40px) rotateY(180deg);
+    }
+}
+.shake_hands_playe2{
+    animation: shake_hands_playe2 0.5s ease-in infinite alternate-reverse ;
+}
+@keyframes shake_hands_playe2 {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-40px);
+    }
+}
+@media (max-width: 500px) {
+    .hand_player1,.hand_computer{
+        width: 180px;
+        height: auto
+    }
+    .btn_option{
+        font-size: 15px;
+        max-width: 100px;
+    }
+    .board_game{
+        justify-content: flex-start;
+        height: auto;
+        padding-top: 40px;
+    }
+}
